@@ -1,0 +1,63 @@
+/* CarAnalysis.css */
+.car-analysis-wrapper {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-end;
+  height: 120vh;
+}
+
+.car-analysis-container {
+  width: 1440px;
+  height: 820px;
+  padding: 2rem;
+  border: 1px solid #ffffff; /* Optional border */
+  background: #f9f9f9; /* Optional background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  overflow: auto;
+}
+
+.chart-container {
+  margin-top: 1rem;
+  position: relative;
+
+}
+
+.chart-title {
+  margin-bottom: 1rem;
+}
+
+.pie-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Adjust as needed */
+}
+.bar-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1200px; /* Adjust as needed */
+}
+
+
+
+@media (max-width: 768px) {
+  .chart {
+    height: 768px; /* Adjust for smaller screens */
+    
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.list-group-item {
+  padding: 1rem;
+}
+.table-wrapper {
+  width: 100%;
+  max-width: 1200px; /* Adjust the max-width as needed */
+  margin: 0 auto; /* Center the wrapper horizontally */
+}
+
