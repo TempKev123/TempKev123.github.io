@@ -1,16 +1,16 @@
 /* CarAnalysis.css */
 .car-analysis-wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  flex-direction: column; 
+  justify-content: flex-end;
+  height: 120vh;
 }
 
 .car-analysis-container {
   width: 1440px;
   height: 820px;
   padding: 2rem;
-  border: 1px solid #ddd; /* Optional border */
+  border: 1px solid #ffffff; /* Optional border */
   background: #f9f9f9; /* Optional background color */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
   overflow: auto;

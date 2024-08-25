@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col, Button, Table } from 'react-bootstrap';
+import { Container, Row, Col, Button, Table,Navbar, Nav  } from 'react-bootstrap';
 import { Pie, Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement, BarElement, CategoryScale, LinearScale } from 'chart.js';
 import carData from '../assets/taladrod-cars.json'; // Adjust the path if necessary
@@ -27,7 +27,7 @@ const CarAnalysis = () => {
     cars.forEach((car) => {
       const { Model, NameMMT, Prc } = car;
       const brand = NameMMT ? NameMMT.split(' ')[0] : ''; // Extract the brand from NameMMT
-      console.log(brand, Model, Prc);
+     // console.log(brand, Model, Prc);
       // Ensure Value is a number
       const numericValue = parseInt(Prc.replace(/[,*]/g, ''),10);
 
@@ -92,7 +92,7 @@ const CarAnalysis = () => {
       borderWidth: 1,
     }],
   };
-
+//console.log
   const barChartData = {
     labels: modelData.map((item) => item.brand),
     datasets: modelData.flatMap((item) => {
@@ -111,11 +111,18 @@ const CarAnalysis = () => {
 
   return (
     <div className="car-analysis-wrapper">
+      <Navbar bg="light" expand="lg">
+        <Container>
+          <Navbar.Brand href="/">Dashboard</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="/highlighted">Highlighted Cars</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
       <Container className="car-analysis-container">
         <Row className="my-4 justify-content-center">
           <Col md={12} lg={10} xl={8} className="text-center mb-4">
             <h2>Car Analysis Dashboard</h2>
-            <Button href="/" variant="primary" className="mb-3">Back to Dashboard</Button>
           </Col>
         </Row>
         <Row className="my-4">
